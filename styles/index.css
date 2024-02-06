@@ -14,16 +14,15 @@ main {
     display: flex;
     background-color: white;
     justify-content: space-between;
-    height: 500px;
+    /* height: 450px; */
     align-items: center;
-    width: 850px;
-    /* margin: 150px; */
+    /* width: 850px; */
+    padding: 50px;
     border-radius: 20px;
 }
  
 .left-side-container {
     position: relative;
-    /* width: 300px; */
 }
 
 .box {
@@ -37,19 +36,23 @@ img {
     margin-left: -70px;
 }
 
+.pattern {
+    position: absolute;
+    left: 0px;
+    top: -50px;
+    height: 450px;
+}
+
 .right-side-container {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    /* width: 300px; */
     width: 50%;
 }
 
 .container {
     border-bottom: 1px solid rgb(210, 210, 210);
-    /* background-color: red; */
     width: 320px;
-    /* height: 40px; */
     position: relative;
     cursor: pointer;
 }
@@ -60,15 +63,11 @@ img {
 
 .question {
     font-size: 14px;
-    /* width: 300px; */
     margin: 0;
     margin-top: 10px;
-    /* transition: font-weight 0.9s; */
-
 }
 
 .answer {
-    /* display: none; */
     opacity: 0;
     font-size: 12px;
     width: 330px;
