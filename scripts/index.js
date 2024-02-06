@@ -18,15 +18,6 @@ items.forEach((item) => {
 document.querySelector('.que-ans-container').innerHTML = html;
 
 
-// let arrowDown = document.querySelectorAll('.arrow-down');
-// arrowDown.forEach((arrow) => {
-//     arrow.addEventListener('click', () => {
-//         let { arrowId } = arrow.dataset;
-
-//         alert(arrowId);
-//     })
-// })
-
 let isShowing = true;
 
 document.querySelectorAll('.container').forEach((element) => {
