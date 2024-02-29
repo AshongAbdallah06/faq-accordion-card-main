@@ -8,7 +8,7 @@ items.forEach((item) => {
             <p class="question js-question-${item.id}">
                 ${item.question}
             </p>
-            <img src="images/icon-arrow-down.svg" class="arrow-down" data-arrow-id=${item.id}>
+            <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow-down" data-arrow-id=${item.id}>
             <p class="answer js-answer-${item.id}">
                 ${item.answer}
             </p>
