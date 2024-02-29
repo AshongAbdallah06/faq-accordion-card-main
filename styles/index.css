@@ -34,7 +34,7 @@ main {
 .left-side-container {
     position: relative;
     animation: slideInLeft 1s 1s ease forwards;
-    transform: translateX(-600px);
+    transform: translateX(-700px);
 }
 
 @keyframes slideInLeft {
