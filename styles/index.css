@@ -39,7 +39,7 @@ main {
 
 @keyframes slideInLeft {
     0% {
-        transform: translateX(-500px);
+        transform: translateX(-600px);
     }
 
     100% {
