@@ -17,10 +17,34 @@ main {
     align-items: center;
     padding: 50px;
     border-radius: 20px;
+    transform: translateY(-600px);
+    animation: slideInBottom 0.5s ease forwards;
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(-500px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
  
 .left-side-container {
     position: relative;
+    animation: slideInLeft 1s 1s ease forwards;
+    transform: translateX(-600px);
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 h1 {
@@ -50,6 +74,18 @@ img {
     flex-direction: column;
     margin-left: 50px;
     width: 50%;
+    transform: translateX(600px);
+    animation: slideInRight 1s 1s ease forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(600px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 .container {

@@ -17,29 +17,36 @@ items.forEach((item) => {
 });
 document.querySelector('.que-ans-container').innerHTML = html;
 
-
-let isShowing = true;
+let currentlyOpenQuestionId = null;
 
 document.querySelectorAll('.container').forEach((element) => {
     element.addEventListener('click', () => {
         let { questionId } = element.dataset;
 
         let answer = document.querySelector(`.js-answer-${questionId}`);
+        let currentQuestionElement = document.querySelector(`.js-question-${questionId}`);
 
-        if (isShowing) {
-            answer.style.opacity = '1';
-            answer.style.paddingBottom = '40px';
-    
-            document.querySelector(`.js-question-${questionId}`).classList.add('current-question')
-
-            isShowing = false;
-        } else {
+        if (currentlyOpenQuestionId === questionId) {
+            // Clicking on the currently open FAQ, close it
             answer.style.opacity = '0';
             answer.style.paddingBottom = '0';
-    
-            document.querySelector(`.js-question-${questionId}`).classList.remove('current-question')
+            currentQuestionElement.classList.remove('current-question');
+            currentlyOpenQuestionId = null;
+        } else {
+            // Close the currently open FAQ, if any
+            if (currentlyOpenQuestionId !== null) {
+                let currentAnswer = document.querySelector(`.js-answer-${currentlyOpenQuestionId}`);
+                let currentQuestion = document.querySelector(`.js-question-${currentlyOpenQuestionId}`);
+                currentAnswer.style.opacity = '0';
+                currentAnswer.style.paddingBottom = '0';
+                currentQuestion.classList.remove('current-question');
+            }
 
-            isShowing = true;
+            // Open the clicked FAQ
+            answer.style.opacity = '1';
+            answer.style.paddingBottom = '40px';
+            currentQuestionElement.classList.add('current-question');
+            currentlyOpenQuestionId = questionId;
         }
     })
-})
+});
